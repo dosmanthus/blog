@@ -3,8 +3,18 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-  <main>
-    <h1>About</h1>
-    <p>Jamstack development agency.</p>
-  </main>
+  <div class="max-w-full md:max-w-5xl m-auto text-center py-8">
+    <h1>About YGDD</h1>
+    <p>我是DD，一名前端工程師，aka愛吃的歪嘴雞。<br/>興趣是籃球、學習、露營和睡覺。</p>
+  </div>
 </Layout>
+
+<style>
+  h1 {
+    @apply text-center text-3xl font-bold mb-8;
+  }
+
+  p {
+    @apply mb-8;
+  }
+</style>

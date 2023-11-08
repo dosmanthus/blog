@@ -1,0 +1,19 @@
+---
+import Blog from '../../layouts/Blog.astro';
+import { getCollection } from 'astro:content';
+const blogEntries = await getCollection('blog');
+---
+<Blog title='blog'>
+  <ul>
+    {blogEntries.map(blogPostEntry => (
+      <li>
+        <span class="inline-block mr-8 text-sm">
+          <time datetime={blogPostEntry.data.publishedDate.toISOString()}>
+            {blogPostEntry.data.publishedDate.toDateString()}
+          </time>
+        </span>
+        <a href={`/blog/${blogPostEntry.slug}`}>{blogPostEntry.data.title}</a>
+      </li>
+    ))}
+  </ul>
+</Blog>

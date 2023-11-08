@@ -6,8 +6,10 @@ export default {
 		colors: {
 			transparent: 'transparent',
       current: 'currentColor',
-			black: '#282828',
+			black: '#051014',
 			white: '#D9D9D9',
+			grey: '#5F5B6B',
+			blue: '#4D7EA8',
 		},
 		extend: {},
 	},
