@@ -7,7 +7,7 @@ sortOrder: 0
 isDraft: true
 relatedPosts: []
 image: {
-  src: "./the-beginning-of-divine-time.jpg",
+  src: "/the-beginning-of-divine-time.jpg",
   alt: ""
 }
 tags: ['frontend']
