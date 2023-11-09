@@ -9,7 +9,10 @@ export default {
 			black: '#051014',
 			white: '#D9D9D9',
 			grey: '#5F5B6B',
-			blue: '#4D7EA8',
+			green: {
+				DEFAULT: '#2CF6B3',
+				dark: '#308F70'
+			},
 		},
 		extend: {},
 	},

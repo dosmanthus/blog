@@ -14,13 +14,21 @@ const { Content } = await entry.render();
 ---
 
 <Blog title={entry.data.title}>
-  <div class="max-w-full md:max-w-3xl py-8 m-auto">
+  <article class="max-w-full md:max-w-3xl py-8 m-auto">
     <h1 class="text-center text-3xl">{entry.data.title}</h1>
     <p class="text-center text-sm my-4">
       <time datetime={entry.data.publishedDate.toISOString()}>
         {entry.data.publishedDate.toDateString()}
       </time>
+      <span class="block">(<time datetime={entry.data.updatedDate.toISOString()}>
+        {entry.data.updatedDate.toDateString()}
+      </time>更新)</span>
     </p>
+    <ul class="flex justify-center">
+      {entry.data.tags.map((tag) => (
+        <li>#{tag}</li>
+      ))}
+    </ul>
     <Content />
-  </div>
+  </article>
 </Blog>

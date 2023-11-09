@@ -16,7 +16,7 @@ const { title } = Astro.props;
 		<div class="flex flex-col h-full">
 			<BaseHeader />
 			<main class="grow py-8">
-				<div class="max-w-[40em] m-auto">
+				<div>
 					<slot />
 				</div>
 			</main>
@@ -47,15 +47,22 @@ const { title } = Astro.props;
 			monospace;
 	}
 
+	h1 {
+		@apply tracking-wider text-white;
+	}
+
 	h2 {
-		@apply text-xl mt-16 mb-4;
+		@apply text-xl mt-16 mb-4 tracking-wider underline underline-offset-4;
 	}
 
 	quote {
-		@apply block text-xl text-grey my-8 py-2 border-l-2 border-grey;
+		@apply block text-xl text-green-dark my-8 py-2 border-l-2 border-green-dark;
 	}
 
 	main a {
-		@apply text-blue;
+		@apply text-green hover:text-green-dark;
+	}
+	a {
+		@apply hover:text-green;
 	}
 </style>
