@@ -17,7 +17,7 @@ const blogCollection = defineCollection({
     footnote: z.string().optional(),
     // In frontmatter, dates written without quotes around them are interpreted as Date objects
     publishedDate: z.string().transform((str) => new Date(str)),
-    updatedDate: z.string().transform((str) => new Date(str)),
+    updatedDate: z.string().transform((str) => new Date(str)).optional(),
     // You can also transform a date string (e.g. "2022-07-08") to a Date object
     // publishDate: z.string().transform((str) => new Date(str)),
     // Advanced: Validate that the string is also a URL

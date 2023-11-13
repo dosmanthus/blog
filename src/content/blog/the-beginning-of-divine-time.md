@@ -4,13 +4,13 @@ publishedDate: "2023-11-08"
 updatedDate: "2023-11-09"
 canonicalURL: "https://ygdd.netlify.app/blog/beginning"
 sortOrder: 0
-isDraft: true
+isDraft: false
 relatedPosts: []
 image: {
   src: "/the-beginning-of-divine-time.jpg",
   alt: ""
 }
-tags: ['frontend']
+tags: []
 #relatedPosts:
 #- about-me # references `src/content/blog/about-me.md`
 #- my-year-in-review # references `src/content/blog/my-year-in-review.md`

@@ -20,9 +20,14 @@ const { Content } = await entry.render();
       <time datetime={entry.data.publishedDate.toISOString()}>
         {entry.data.publishedDate.toDateString()}
       </time>
-      <span class="block">(<time datetime={entry.data.updatedDate.toISOString()}>
-        {entry.data.updatedDate.toDateString()}
-      </time>更新)</span>
+      {
+        entry.data.updatedDate &&
+        <span class="block">
+          (<time datetime={entry.data.updatedDate?.toISOString()}>
+            {entry.data.updatedDate?.toDateString()}
+          </time>更新)
+        </span>
+      }
     </p>
     <ul class="flex justify-center">
       {entry.data.tags.map((tag) => (
