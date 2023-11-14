@@ -6,7 +6,9 @@ const blogEntries = await getCollection('blog');
 <Blog title='blog'>
   <div class="max-w-full md:max-w-5xl m-auto">
     <ul class="flex px-4 gap-4">
-      {blogEntries.map(blogPostEntry => (
+      {blogEntries
+        .sort((a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime())
+        .map(blogPostEntry => (
         <li class="sm:w-1/2 md:w-1/3">
           <div class="aspect-square flex items-center justify-center overflow-hidden rounded-md">
             <img class="object-cover" src={blogPostEntry.data.image?.src} alt={blogPostEntry.data.image?.alt}>

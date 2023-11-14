@@ -2,8 +2,6 @@
 title: "【化輸入爲輸出】課程心得"
 publishedDate: "2023-11-13"
 canonicalURL: "https://ygdd.netlify.app/blog/input-to-output"
-sortOrder: 1
-isDraft: false
 relatedPosts: []
 image: {
   src: "/input-to-output.jpg",
